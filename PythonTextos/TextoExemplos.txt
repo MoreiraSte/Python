@@ -1,0 +1,22 @@
+#Fatiamento
+# 6:10 --> nao mostra ultimo caracter
+# 0:15:2 --> dois em dois
+#[9:] --> começo aparece
+# [1: :3] --> tres em tres
+# (len(frase)) --> imprime o tamanho da string
+# (frase.count('o')) --> contar quantas letras o tem
+#(frase.count('o',0,13)) --> imprime a letra o de 0 a 13
+#(frase.find('o')) --> localizar a primeira letra o
+# (frase.find('de')) --> mosra a primeira posição, onde esta o D
+# ("Curso" in frase) --> se tiver curso vai dar true
+#(frase.replace('Python', 'Café')) --> Replace troca de palavra
+#(frase.upper()) --> converter para maiusculo
+#(frase.capitalize()) --> Deixa a primeira letra em maiusculo
+#(frase.title()) --> coloca a primeira letra de cada palavra em maiuscula
+#(frase.strip()) --> anula os espaços no começo e fim
+#(frase.rstrip())--> anula espaço apenas da direita
+#(frase.lstrip())--> anula espaço apenas da esquerda
+#(frase.split()) --> quebra a frase, fazendo uma lista
+#('-'.join(frase)) --> junção da frase, nesse caso o tracinho, colocando em cada letra
+#texto = frase.split() -> print('-'.join(texto)) --> vai colocar traço entre palavras
+# (texto[::-1]) --> mostra a frase ao contrario/inverte

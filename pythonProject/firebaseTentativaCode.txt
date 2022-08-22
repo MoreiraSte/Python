@@ -1,0 +1,42 @@
+# UPLOAD
+            if op == 6:
+                print("\033[1;96m=-=\033[0;0m" * 12)
+                print("\033[1;96m             CONFIRMAÇÃO DE UPLOAD\033[0;0m")
+                print("\n\033[1;96m[1]\033[0;0m - Confirmo"
+                      "\n\033[1;96m[2]\033[0;0m - Cancelar")
+                confirm = input("\033[1;96mOPÇÃO: \033[0;0m")
+                print("\033[1;96m=-=\033[0;0m" * 12)
+
+                if confirm == 1:
+                    planilha = pd.read_excel("EntidadeTemporaria.xlsx")
+
+                    firebaseConfig = {
+                        "apiKey": "AIzaSyAy9G6hXUOqiXRGAa3Zl4_D5zN_IxFxT-s",
+                        "authDomain": "pyplanilha-project.firebaseapp.com",
+                        "projectId": "pyplanilha-project",
+                        "storageBucket": "pyplanilha-project.appspot.com",
+                        "messagingSenderId": "1063421033656",
+                        "appId": "1:1063421033656:web:e436bfe508544c705cc84d",
+                        "databaseURL": "https://console.firebase.google.com/project/pyplanilha-project/database/pyplanilha-project-default-rtdb/data/~2F?hl=pt-br"
+                    }
+
+                    # inicializa firebase
+                    firebase = pyrebase.initialize_app(firebaseConfig)
+                    dados = firebase.database()
+                    dados.child().update(planilha)
+
+                    print("\033[1;33m UPLOAD REALIZADO... \033[0;0m")
+                    time.sleep(7)
+                    print("\n\n\n\n")
+
+                if confirm == 2:
+                    continue
+# // Initialize Firebase
+# const app = initializeApp(firebaseConfig);
+
+# instalação para hospedar
+# npm install -g firebase-tools
+# implantar no firebase hosting
+# firebase login
+# firebase init
+# firebase deploy
